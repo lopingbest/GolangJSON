@@ -6,12 +6,19 @@ import (
 	"testing"
 )
 
+type Address struct {
+	Street     string
+	Country    string
+	Postalcode string
+}
+
 type Customer struct {
-	FirstName string
-	LastName  string
-	Age       int
-	Married   bool
-	Hobbies   []string
+	FirstName  string
+	LastName   string
+	Age        int
+	Married    bool
+	Hobbies    []string
+	Addressses []Address
 }
 
 func TestJSONObject(t *testing.T) {
