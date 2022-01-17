@@ -6,7 +6,9 @@ import (
 	"testing"
 )
 
+//interface kosong, berarti semua data bisa masuk
 func logJson(data interface{}) {
+	//proses encode
 	bytes, err := json.Marshal(data)
 	if err != nil {
 		panic(err)
