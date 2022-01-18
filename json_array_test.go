@@ -68,7 +68,7 @@ func TestJSONArrayComplexDecode(t *testing.T) {
 	fmt.Println(customer.Addressses)
 }
 
-func TestONlyJSONArrayComplexDecode(t *testing.T) {
+func TestOnlyJSONArrayComplexDecode(t *testing.T) {
 	jsonString := `[{"Street":"Jalanin aja dulu","Country":"Indonesia","Postalcode":"50215"},{"Street":"Sering jalan jadian kaga","Country":"wakanda","Postalcode":"50503"}]`
 	jsonBytes := []byte(jsonString)
 
