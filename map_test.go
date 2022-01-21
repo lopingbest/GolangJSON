@@ -6,7 +6,7 @@ import (
 	"testing"
 )
 
-func TestMap(t *testing.T) {
+func TestMapDecode(t *testing.T) {
 	jsonString := `{"id":"p0001","name":"Apple Macbook Pro","price":"20000000"}`
 	jsonBytes := []byte(jsonString)
 
@@ -17,4 +17,15 @@ func TestMap(t *testing.T) {
 	fmt.Println(result["id"])
 	fmt.Println(result["name"])
 	fmt.Println(result["price"])
+}
+
+func TestMapEncode(t *testing.T) {
+	product := map[string]interface{}{
+		"id":    "p0001",
+		"name":  "Apple Mac Book Pro",
+		"price": "20000000",
+	}
+
+	bytes, _ := json.Marshal(product)
+	fmt.Println(string(bytes))
 }
